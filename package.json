@@ -1,0 +1,40 @@
+{
+  "name": "setup_new_project",
+  "version": "0.0.1",
+  "description": "setup for new js automation projects",
+  "scripts": {
+    "start:driver": "webdriver-manager start",
+    "update:driver": "webdriver-manager update",
+    "lint": "tslint -e './node_modules/' -p ./tsconfig.json",
+    "pretest": "npm run lint",
+    "test:local": "protractor ./protractor.conf.js  -l",
+    "test:all-screen": "protractor ./protractor.conf.js  -s",
+    "test": "bash ./start.sh",
+    "framework-test": "",
+    "tsc": "tsc",
+    "tscw": "tsc -w",
+    "validate": "npm ls"
+  },
+  "pre-commit": [
+    "lint",
+    "tsc"
+  ],
+  "author": "Paul Gladoon",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.24",
+    "chai": "^4.2.0",
+    "log4js": "^6.1.0",
+    "minimist": "^1.2.0",
+    "mocha": "^7.0.0",
+    "mocha-allure-reporter": "^1.4.0",
+    "node-fetch": "^2.6.0",
+    "protractor": "^5.4.2",
+    "protractor-retry": "^1.2.9",
+    "ts-node": "^8.6.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.5"
+  }
+}
