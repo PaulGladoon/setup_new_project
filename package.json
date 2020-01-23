@@ -13,7 +13,8 @@
     "framework-test": "",
     "tsc": "tsc",
     "tscw": "tsc -w",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "up:driver": "java -Dwebdriver.gecko.driver=/Users/administrator/Documents/setup_new_project/node_modules/protractor/node_modules/webdriver-manager/selenium/geckodriver-v0.26.0 -Dwebdriver.chrome.driver=/Users/administrator/Documents/setup_new_project/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_79.0.3945.36 -Dwebdriver.edge.driver=/Users/administrator/Documents/setup_new_project/node_modules/protractor/node_modules/webdriver-manager/selenium/msedgedriver -jar /Users/administrator/Documents/setup_new_project/node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar -port 4444"
   },
   "pre-commit": [
     "lint",

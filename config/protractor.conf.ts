@@ -80,15 +80,15 @@ const conf: Config = {
     await browser.close().catch(console.error)
   },
   beforeLaunch: async () => {
-    if (process.env.RUN_BROWSER === 'edge') {
-      await clearEdgeSessionIfEgists()
-    }
+    // if (process.env.RUN_BROWSER === 'edge') {
+    //   await clearEdgeSessionIfEgists()
+    // }
   },
   onCleanUp: async (results) => {
     retry.onCleanUp(results)
-    if (browser.___browserName === 'MicrosoftEdge') {
-      await clearEdgeSessionIfEgists()
-    }
+    // if (browser.___browserName === 'MicrosoftEdge') {
+    //   await clearEdgeSessionIfEgists()
+    // }
   },
   afterLaunch: async () => {
     return retry.afterLaunch(2)

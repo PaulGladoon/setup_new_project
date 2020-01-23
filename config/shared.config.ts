@@ -4,7 +4,7 @@ const envToBrowser = () => {
       browserName: 'chrome',
       maxInstances: 5,
       shardTestFiles: true,
-      version: '73',
+      version: '79',
       chromeOptions: {
         args: [
           '--disable-gpu',
@@ -34,7 +34,8 @@ const envToBrowser = () => {
     },
     edge: {
       browserName: 'MicrosoftEdge',
-      version: '44.17763'
+      maxInstances: 5,
+      shardTestFiles: true
     },
     firefox: {
       browserName: 'firefox',
@@ -68,7 +69,7 @@ const envToBrowser = () => {
     iechrome: ['ie', 'chrome']
   }
 
-  const runBrowsers = process.env.RUN_BROWSER || 'chrome'
+  const runBrowsers = process.env.RUN_BROWSER || 'edge'
 
   return envBrowserMap[runBrowsers.trim()].map((br) => browsersMap[br])
   /* tslint:enable:no-unused-expression */
