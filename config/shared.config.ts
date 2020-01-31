@@ -60,16 +60,17 @@ const envToBrowser = () => {
 
   const envBrowserMap = {
     ie: ['ie'],
-    all: ['ie', 'chrome', 'firefox'],
+    all: ['ie', 'chrome', 'firefox', 'edge'],
     edge: ['edge'],
     firefox: ['firefox'],
     chrome: ['chrome'],
     modern: ['chrome', 'firefox'],
     iefirefox: ['ie', 'firefox'],
-    iechrome: ['ie', 'chrome']
+    iechrome: ['ie', 'chrome'],
+    chromeedge: ['chrome', 'edge']
   }
 
-  const runBrowsers = process.env.RUN_BROWSER || 'edge'
+  const runBrowsers = process.env.RUN_BROWSER || 'chromeedge'
 
   return envBrowserMap[runBrowsers.trim()].map((br) => browsersMap[br])
   /* tslint:enable:no-unused-expression */
