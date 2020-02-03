@@ -1,5 +1,5 @@
 import {browser, ExpectedConditions as EC, $} from 'protractor'
-import {pages} from '../../page_objects'
+import {pages} from '../../../page_objects'
 import {expect} from 'chai'
 
 const {basePage} = pages

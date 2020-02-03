@@ -1,4 +1,4 @@
-import {pages} from '../../page_objects'
+import {pages} from '../../../page_objects'
 import {expect} from 'chai'
 
 const {basePage} = pages
